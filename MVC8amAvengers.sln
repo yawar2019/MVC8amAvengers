@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC8amAvengers", "MVC8amAvengers\MVC8amAvengers.csproj", "{0D8FBC8B-FEE8-4F22-A6BA-B63D86AE452C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc8amAvengersTeam", "Mvc8amAvengersTeam\Mvc8amAvengersTeam.csproj", "{F406371B-9825-4094-8E59-257460A5EAEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0D8FBC8B-FEE8-4F22-A6BA-B63D86AE452C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D8FBC8B-FEE8-4F22-A6BA-B63D86AE452C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D8FBC8B-FEE8-4F22-A6BA-B63D86AE452C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F406371B-9825-4094-8E59-257460A5EAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F406371B-9825-4094-8E59-257460A5EAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F406371B-9825-4094-8E59-257460A5EAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F406371B-9825-4094-8E59-257460A5EAEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
