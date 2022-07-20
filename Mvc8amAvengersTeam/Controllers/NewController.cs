@@ -9,7 +9,7 @@ namespace Mvc8amAvengersTeam.Controllers
 {
     public class NewController : Controller
     {
-        // GET: New Sharang
+        // GET: New Madhavi
         //[NonAction]
         public string Index()
         {
