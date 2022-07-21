@@ -5,4 +5,33 @@
 
 <h2>getSomePartialView2</h2>
 
-@Html.Partial("_MyEmployeeListPartialView",Model)
+@{
+    var s=Html.Partial("_MyEmployeeListPartialView", Model);
+    int a = 10;
+    if (a > 10)
+    {
+        @s
+    }
+
+    }
+
+@s
+
+@{
+    Html.RenderPartial("_MyEmployeeListPartialView", Model);
+    }
+
+@* 
+note:
+Render PartialMethod is More Faster then Partial Method
+Partial Method return type is mvcHtmlString
+RenderPartial Method is Void
+Render Partial Method is only to display Html where as Partial Method Prepare html string
+and Display Html.
+ *@
+
+<script src="~/scripts/jquery-1.10.2.js"></script>
+<script>
+
+   alert($('#txtname').val());
+</script>

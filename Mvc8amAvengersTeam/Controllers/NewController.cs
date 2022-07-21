@@ -200,5 +200,31 @@ namespace Mvc8amAvengersTeam.Controllers
             return View(listEmployee);
 
         }
+
+        public ActionResult getDirectPv()
+        {
+            List<EmployeeModel> listEmployee = new List<EmployeeModel>();
+
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Radha";
+            emp.EmpSalary = 700000;
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "Johny";
+            emp1.EmpSalary = 900000;
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "James";
+            emp2.EmpSalary = 600000;
+
+            listEmployee.Add(emp);
+            listEmployee.Add(emp1);
+            listEmployee.Add(emp2);
+
+            return PartialView("_MyEmployeeListPartialView", listEmployee);
+        }
     }
 }
