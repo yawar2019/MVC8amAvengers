@@ -226,5 +226,46 @@ namespace Mvc8amAvengersTeam.Controllers
 
             return PartialView("_MyEmployeeListPartialView", listEmployee);
         }
+
+         public ActionResult GetMyView()
+        {
+            return View("getmeView");
+        }
+
+        public ActionResult GetMyView2()
+        {
+            return View("~/Views/Default/Index.cshtml");
+        }
+
+        public RedirectToRouteResult GetMyView3()
+        {
+            return RedirectToAction("Index","Default",new {id=1});
+        }
+
+        public RedirectToRouteResult GetMyView4()
+        {
+            List<EmployeeModel> listEmployee = new List<EmployeeModel>();
+
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Radha";
+            emp.EmpSalary = 700000;
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "Johny";
+            emp1.EmpSalary = 900000;
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "James";
+            emp2.EmpSalary = 600000;
+
+            listEmployee.Add(emp);
+            listEmployee.Add(emp1);
+            listEmployee.Add(emp2);
+
+            return RedirectToAction("Index2", "Default", listEmployee);
+        }
     }
 }
