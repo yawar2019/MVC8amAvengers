@@ -359,5 +359,30 @@ namespace Mvc8amAvengersTeam.Controllers
         {
             return File("~/Web.config", "application/xml");
         }
+        public FileResult GetFileData3()
+        {
+            return File("~/Notes/ActionResult.pdf", "application/pdf");
+        }
+        public FileResult GetFileData4()
+        {
+            return File("~/Notes/ActionResult.pdf", "application/pdf", "ActionResult.pdf");
+        }
+
+        public ContentResult GetContent(int? id)
+        {
+            if(id==1)
+            {
+                return Content("Hello World");
+            }
+            else if (id == 2)
+            {
+                return Content("<p style='color:red'>Hello World</p>");
+            }
+            else
+            {
+                return Content("<script> alert('Hello World')</script>");
+
+            }
+        }
     }
 }
