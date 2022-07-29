@@ -4,13 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
+
 namespace AdoDotnet.Models
 {
    
     public class EmployeeContext
     {
-        SqlConnection con = new SqlConnection("Data Source=AZAM-PC\\SQLEXPRESS;Initial Catalog=AvengersDb;Integrated Security=true");
-
+        //SqlConnection con = new SqlConnection("Data Source=AZAM-PC\\SQLEXPRESS;Initial Catalog=AvengersDb;Integrated Security=true");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlCon"].ToString());
+//        //
+//        CREATE PROCEDURE sp_getEmployee
+//        As
+//BEGIN
+//select* from[dbo].[Employee]
+//        End
         public List<EmployeeModel> GetAllEmployee()
         {
             List<EmployeeModel> listemp = new List<EmployeeModel>();
