@@ -39,5 +39,35 @@ namespace AdoDotnet.Models
 
             return listemp;
         }
+
+//        USE[AvengersDb]
+//GO
+///****** Object:  StoredProcedure [dbo].[sp_getEmployee]    Script Date: 7/30/2022 8:24:15 AM ******/
+//SET ANSI_NULLS ON
+//GO
+//SET QUOTED_IDENTIFIER ON
+//GO
+
+//CREATE PROCEDURE[dbo].[sp_SaveEmployee]
+//        @EmpName varchar(50),
+//@EmpSalary int
+//As
+//BEGIN
+//insert into[dbo].[Employee](EmpName,EmpSalary)values(@EmpName, @EmpSalary)
+//END
+        public int SaveEmployee(EmployeeModel emp)
+        {
+            SqlCommand cmd = new SqlCommand("sp_SaveEmployee", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@EmpName",emp.EmpName);
+            cmd.Parameters.AddWithValue("@EmpSalary",emp.EmpSalary);
+            con.Open();
+            int i = cmd.ExecuteNonQuery();//returns nos of rows effected
+            con.Close();
+            return i; 
+        }
     }
 }
+
+
+//Bookid,BookName,Author,Category,Description,price
