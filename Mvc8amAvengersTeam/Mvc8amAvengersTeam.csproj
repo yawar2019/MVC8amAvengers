@@ -134,6 +134,7 @@
     <Content Include="Notes\MvcNew Material.docx" />
     <Content Include="Notes\Running Notes MVC.docx" />
     <Content Include="Notes\ActionResult.pdf" />
+    <Content Include="Notes\Course Content MVC and MVC Core.docx" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
