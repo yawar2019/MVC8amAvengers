@@ -19,7 +19,7 @@ namespace Mvc8amAvengersTeam.Controllers
         public ActionResult GetMeView()
         {
             string a = Index();
-            ViewBag.info =a;
+            ViewBag.info = a;
             return View();
         }
         //controller/action/eid
@@ -28,7 +28,7 @@ namespace Mvc8amAvengersTeam.Controllers
         [Route("new/test")]
         public string test(int? id)
         {
-            return "My Employee id is "+id+" Name is "+Request.QueryString["name"]+ "Designation is "+Request.QueryString["Designation"];
+            return "My Employee id is " + id + " Name is " + Request.QueryString["name"] + "Designation is " + Request.QueryString["Designation"];
         }
 
         public ActionResult getSomeData()
@@ -108,7 +108,7 @@ namespace Mvc8amAvengersTeam.Controllers
             listEmployee.Add(emp1);
             listEmployee.Add(emp2);
 
-           
+
 
 
             return View(listEmployee);
@@ -154,7 +154,7 @@ namespace Mvc8amAvengersTeam.Controllers
             EmpDept ed = new EmpDept();
             ed.emp = listEmployee;
             ed.dept = listDept;
-            
+
 
             return View(ed);
         }
@@ -196,7 +196,7 @@ namespace Mvc8amAvengersTeam.Controllers
             listEmployee.Add(emp);
             listEmployee.Add(emp1);
             listEmployee.Add(emp2);
-            
+
             return View(listEmployee);
 
         }
@@ -227,7 +227,7 @@ namespace Mvc8amAvengersTeam.Controllers
             return PartialView("_MyEmployeeListPartialView", listEmployee);
         }
 
-         public ActionResult GetMyView()
+        public ActionResult GetMyView()
         {
             return View("getmeView");
         }
@@ -239,7 +239,7 @@ namespace Mvc8amAvengersTeam.Controllers
 
         public RedirectToRouteResult GetMyView3()
         {
-            return RedirectToAction("Index","Default",new {id=1});
+            return RedirectToAction("Index", "Default", new { id = 1 });
         }
 
         public RedirectToRouteResult GetMyView4()
@@ -310,14 +310,14 @@ namespace Mvc8amAvengersTeam.Controllers
             listDept.Add(dept1);
             listDept.Add(dept2);
 
-             
+
             EmpDept ed = new EmpDept();
             ed.emp = listEmployee;
             ed.dept = listDept;
             return Json(ed, JsonRequestBehavior.AllowGet);
         }
 
-        
+
         public JsonResult GetjsonData2()
         {
             List<EmployeeModel> listEmployee = new List<EmployeeModel>();
@@ -342,7 +342,7 @@ namespace Mvc8amAvengersTeam.Controllers
             listEmployee.Add(emp2);
 
 
- 
+
             return Json(listEmployee, JsonRequestBehavior.AllowGet);
         }
 
@@ -353,7 +353,7 @@ namespace Mvc8amAvengersTeam.Controllers
 
         public FileResult GetFileData()
         {
-            return File("~/Web.config","text");
+            return File("~/Web.config", "text");
         }
         public FileResult GetFileData2()
         {
@@ -370,7 +370,7 @@ namespace Mvc8amAvengersTeam.Controllers
 
         public ContentResult GetContent(int? id)
         {
-            if(id==1)
+            if (id == 1)
             {
                 return Content("Hello World");
             }
@@ -383,6 +383,11 @@ namespace Mvc8amAvengersTeam.Controllers
                 return Content("<script> alert('Hello World')</script>");
 
             }
+        }
+
+        public ActionResult HtmlHelperExample()
+        {
+            return View();
         }
     }
 }

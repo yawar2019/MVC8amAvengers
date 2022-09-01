@@ -178,6 +178,7 @@
     <Content Include="Views\New\GetMyView.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\New\GetjsonResultInView.cshtml" />
+    <Content Include="Views\New\HtmlHelperExample.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

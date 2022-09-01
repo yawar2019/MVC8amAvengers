@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+
+<input type="type" name="name" value="" />
+<input type="number" id="FirstName" name="FirstName" value="Sharang" style="background-color:skyblue" class="form-control" onclick="fun()" />
+<br />
+@Html.TextBox("LastName",null,new { @style = "background-color:gray", @class = "form-control",@type="file", @onclick = "fun()" })
+<input type="file" />
+
+
+<script>
+    function fun()
+    {
+
+        alert('Hello World.....');
+    }
+</script>
