@@ -387,6 +387,8 @@ namespace Mvc8amAvengersTeam.Controllers
 
         public ActionResult HtmlHelperExample()
         {
+            AvengersDbEntities db = new AvengersDbEntities();
+            ViewBag.Movie = new SelectList(db.Movies, "Id", "MovieName",4);
             return View();
         }
     }

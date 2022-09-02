@@ -11,6 +11,29 @@
 @Html.TextBox("LastName",null,new { @style = "background-color:gray", @class = "form-control",@type="file", @onclick = "fun()" })
 <input type="file" />
 
+<br />
+@Html.Password("pwd","Lion")
+<br />
+<span>java</span>@Html.CheckBox("java", true)
+<span>Dotnet</span>@Html.CheckBox("Dotnet",true)
+
+<br />
+<span>Male</span>@Html.RadioButton("Gender","Male",true)
+<span>Female</span>@Html.RadioButton("Gender", "Female")
+
+<span>Country</span>
+@Html.DropDownList("Country",new List<SelectListItem>() {
+
+new SelectListItem {Text="India",Value="1" },
+new SelectListItem {Text="Bangladesh",Value="2",Selected=true },
+new SelectListItem {Text="sri lanka",Value="3" }
+
+
+},"Select Country",new { @class = "form-control" })
+<br />
+@Html.DropDownList("Movie")<br />
+@Html.DropDownList("mvb", (IEnumerable<SelectListItem>)ViewBag.Movie, "Select Movie")
+
 
 <script>
     function fun()
