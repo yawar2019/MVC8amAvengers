@@ -1,4 +1,4 @@
-﻿
+﻿@model Mvc8amAvengersTeam.Models.EmployeeModel
 @{
     ViewBag.Title = "HtmlHelperExample";
 }
@@ -9,6 +9,9 @@
 <input type="number" id="FirstName" name="FirstName" value="Sharang" style="background-color:skyblue" class="form-control" onclick="fun()" />
 <br />
 @Html.TextBox("LastName",null,new { @style = "background-color:gray", @class = "form-control",@type="file", @onclick = "fun()" })
+@Html.TextBoxFor(s=>s.EmpName, new { @style = "background-color:gray", @class = "form-control", @onclick = "fun()" })
+
+
 <input type="file" />
 
 <br />
@@ -33,6 +36,7 @@ new SelectListItem {Text="sri lanka",Value="3" }
 <br />
 @Html.DropDownList("Movie")<br />
 @Html.DropDownList("mvb", (IEnumerable<SelectListItem>)ViewBag.Movie, "Select Movie")
+@Html.DropDownListFor(s=>s.EmpName, (IEnumerable<SelectListItem>)ViewBag.Movie, "Select Movie")
 
 
 <script>

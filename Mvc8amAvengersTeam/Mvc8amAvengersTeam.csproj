@@ -196,6 +196,7 @@
     <Compile Include="Models\Movie.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +225,8 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\New\GetjsonResultInView.cshtml" />
     <Content Include="Views\New\HtmlHelperExample.cshtml" />
+    <Content Include="Views\New\HtmlHelperExample2.cshtml" />
+    <Content Include="Views\New\HtmlHelperExample3.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

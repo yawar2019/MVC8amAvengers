@@ -388,8 +388,43 @@ namespace Mvc8amAvengersTeam.Controllers
         public ActionResult HtmlHelperExample()
         {
             AvengersDbEntities db = new AvengersDbEntities();
-            ViewBag.Movie = new SelectList(db.Movies, "Id", "MovieName",4);
+            ViewBag.Movie = new SelectList(db.Movies, "Id", "MovieName", 4);
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1211;
+            emp.EmpName = "Hello World";
+            return View(emp);
+        }
+
+        AvengersDbEntities db = new AvengersDbEntities();
+
+        public ActionResult HtmlHelperExample2()
+        {
+            ViewBag.Movie = new SelectList(db.Movies, "Id", "MovieName", 4);
+
             return View();
         }
+
+        [HttpPost]
+        public ActionResult HtmlHelperExample2(RegisterModel reg)
+        {
+            ViewBag.Movie = new SelectList(db.Movies, "Id", "MovieName", 4);
+
+            return View();
+        }
+        public ActionResult HtmlHelperExample3()
+        {
+            ViewBag.Movie = new SelectList(db.Movies, "Id", "MovieName", 4);
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult HtmlHelperExample3(RegisterModel reg)
+        {
+            ViewBag.Movie = new SelectList(db.Movies, "Id", "MovieName", 4);
+
+            return View();
+        }
+
     }
 }

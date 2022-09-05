@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "HtmlHelperExample2";
+}
+
+<h2>HtmlHelperExample2</h2>
+
+
+<form action="~/new/HtmlHelperExample2" method="post">
+    <span>UserName</span> @Html.TextBox("UserName")<br />
+    <span>Password</span> @Html.Password("Password")<br />
+    <span>Gender</span>@Html.RadioButton("Gender", "Male")<span>Male</span> @Html.RadioButton("Gender", "Female")<span>Female</span><br />
+    <span>Movie</span>
+    @Html.DropDownList("EmployeeName", (IEnumerable<SelectListItem>)ViewBag.Movie, "Select Movie")
+
+    <span>Agreement</span>@Html.CheckBox("Agreement", true)
+
+    <input type="submit" value="Save" />
+</form>
