@@ -198,6 +198,7 @@
     </Compile>
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\MyUserControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
