@@ -426,5 +426,14 @@ namespace Mvc8amAvengersTeam.Controllers
             return View();
         }
 
+        public ActionResult ValidationExample()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ValidationExample(RegisterationFormModel reg)
+        {
+            return View();
+        }
     }
 }
