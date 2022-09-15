@@ -1,4 +1,5 @@
-﻿using Mvc8amAvengersTeam.Models;
+﻿using Mvc8amAvengersTeam.Filter;
+using Mvc8amAvengersTeam.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,20 @@ using System.Web.Mvc;
 
 namespace Mvc8amAvengersTeam.Controllers
 {
+
+
+
     public class NewController : Controller
     {
         // GET: New usha
         //[NonAction]
+        [CustomFilter]
+        public ViewResult TestingFiler()
+        {
+            ViewBag.FavPlayer = "Dhoni";
+            return View();
+        }
+
         public string Index()
         {
             return "hello";
@@ -425,7 +436,6 @@ namespace Mvc8amAvengersTeam.Controllers
 
             return View();
         }
-
         public ActionResult ValidationExample()
         {
             return View();
@@ -433,6 +443,7 @@ namespace Mvc8amAvengersTeam.Controllers
         [HttpPost]
         public ActionResult ValidationExample(RegisterationFormModel reg)
         {
+            
             return View();
         }
     }
