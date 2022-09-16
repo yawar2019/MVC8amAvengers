@@ -196,6 +196,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NewController.cs" />
     <Compile Include="Filter\CustomFilter.cs" />
+    <Compile Include="Filter\CustomRole.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

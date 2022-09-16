@@ -42,12 +42,13 @@ namespace Mvc8amAvengersTeam.Controllers
             return Redirect("~/Login/Login");
         }
 
-
+        [Authorize(Roles="Admin")]
         public ActionResult ContactUs()
         {
             return View();
         }
 
+        [Authorize(Roles = "Manager")]
         public ActionResult AboutUs()
         {
             return View();
