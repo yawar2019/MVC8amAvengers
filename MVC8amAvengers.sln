@@ -6,6 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC8amAvengers", "MVC8amAvengers\MVC8amAvengers.csproj", "{0D8FBC8B-FEE8-4F22-A6BA-B63D86AE452C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc8amAvengersTeam", "Mvc8amAvengersTeam\Mvc8amAvengersTeam.csproj", "{F406371B-9825-4094-8E59-257460A5EAEA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{97B4626D-F157-4CBD-BFDC-05119AC37E22} = {97B4626D-F157-4CBD-BFDC-05119AC37E22}
+		{882776EB-FDAE-486F-A431-0A8DF268E566} = {882776EB-FDAE-486F-A431-0A8DF268E566}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoDotnet", "AdoDotnet\AdoDotnet.csproj", "{24323F8F-EA42-4754-B5B5-004A73FC6B26}"
 EndProject
@@ -20,6 +24,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelFirstApproach", "ModelFirstApproach\ModelFirstApproach.csproj", "{66746556-2F75-4B8F-A8CF-88CD6D20B77A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample", "DapperExample\DapperExample.csproj", "{C398A9D3-9AED-4781-A460-7E00A0F38BC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceExample", "WebServiceExample\WebServiceExample.csproj", "{97B4626D-F157-4CBD-BFDC-05119AC37E22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService1", "WcfService1\WcfService1.csproj", "{882776EB-FDAE-486F-A431-0A8DF268E566}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{45DDAB91-45BB-4AAC-9FDC-F35B6E7D9F7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +73,18 @@ Global
 		{C398A9D3-9AED-4781-A460-7E00A0F38BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C398A9D3-9AED-4781-A460-7E00A0F38BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C398A9D3-9AED-4781-A460-7E00A0F38BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B4626D-F157-4CBD-BFDC-05119AC37E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B4626D-F157-4CBD-BFDC-05119AC37E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B4626D-F157-4CBD-BFDC-05119AC37E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B4626D-F157-4CBD-BFDC-05119AC37E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{882776EB-FDAE-486F-A431-0A8DF268E566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882776EB-FDAE-486F-A431-0A8DF268E566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882776EB-FDAE-486F-A431-0A8DF268E566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{882776EB-FDAE-486F-A431-0A8DF268E566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45DDAB91-45BB-4AAC-9FDC-F35B6E7D9F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45DDAB91-45BB-4AAC-9FDC-F35B6E7D9F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45DDAB91-45BB-4AAC-9FDC-F35B6E7D9F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45DDAB91-45BB-4AAC-9FDC-F35B6E7D9F7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

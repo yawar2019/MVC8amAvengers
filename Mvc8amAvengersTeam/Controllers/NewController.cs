@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Mvc8amAvengersTeam.ServiceReference1;
 namespace Mvc8amAvengersTeam.Controllers
 {
 
@@ -445,6 +445,20 @@ namespace Mvc8amAvengersTeam.Controllers
         {
             
             return View();
+        }
+
+        public ActionResult GetAddresultUsingWebService()
+        {
+            ServiceReference1.WebService1SoapClient obj = new ServiceReference1.WebService1SoapClient();
+
+            return Content(obj.Add(23,32).ToString());
+        }
+
+        public ActionResult GetAddresultUsingWCFService()
+        {
+            ServiceReference2.Service1Client obj = new ServiceReference2.Service1Client("WSHttpBinding_IService1");
+
+            return Content(obj.GetAddData(23, 32).ToString());
         }
     }
 }
